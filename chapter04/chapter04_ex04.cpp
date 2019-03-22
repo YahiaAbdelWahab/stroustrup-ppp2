@@ -10,7 +10,7 @@ int main()
     bool check = true;
     cout << "Please pick a number between 0 and 100" << endl;
     while (check) {
-        cout << "Is you number smaller, larger or equal to : " << (start + end) / 2 << "?: (y/n) ";
+        cout << "Is you number smaller, larger or equal to : " << (start + end) / 2 << "?: ";
         cin >> response;
         if (response[0] == 's') {
             end = (start + end) / 2;
