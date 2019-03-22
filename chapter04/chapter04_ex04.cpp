@@ -1,6 +1,5 @@
 #include "../headers/std_lib_facilities.h"
 
-vector<int> getMedian(int start, int end);
 
 int main()
 {
