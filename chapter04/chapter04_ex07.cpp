@@ -62,7 +62,6 @@ int get_input_as_int(string input) {
     for (int i = 0; i < string_numbers.size(); ++i) {
         if (string_numbers[i] == input) {
             result = stoi(int_numbers[i]);
-            //converted = true;
             break;
         }  
     }
@@ -70,7 +69,6 @@ int get_input_as_int(string input) {
     for (int i = 0; i < int_numbers.size(); ++i) {
         if (int_numbers[i] == input) {
             result = stoi(int_numbers[i]);
-            //converted = true;
             break;
         }  
     }
