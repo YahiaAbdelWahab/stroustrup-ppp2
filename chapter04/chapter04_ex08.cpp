@@ -1,10 +1,13 @@
 #include "../headers/std_lib_facilities.h"
 
 int main()
-{
-    int grains = 1;
+{   
+    cout << "Enter the maximum number of grains: ";
+    double grains = 1;
     int squares = 1;
-    while (grains < 1000) {
+    double max_grains;
+    cin >> max_grains;
+    while (grains < max_grains) {
         grains *= 2;
         ++squares;
     }
