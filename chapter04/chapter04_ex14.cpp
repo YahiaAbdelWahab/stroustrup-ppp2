@@ -6,7 +6,11 @@ int main()
 {  
     vector<int> numbers;
 
-    for (int i = 1; i <= 100; i++) {
+    cout << "Enter the max number: ";
+    int max;
+    cin >> max;
+
+    for (int i = 1; i <= max; i++) {
         numbers.push_back(i);
     }
 
@@ -14,20 +18,17 @@ int main()
     numbers.erase(remove(numbers.begin(), numbers.end(), 1), numbers.end());
 
     vector<int> multiplies;
-    for (int i = 2; i < std::sqrt(100); i++) {
-        multiplies = get_mutliplies(i, 100);
+    for (int i = 2; i < std::sqrt(max); i++) {
+        multiplies = get_mutliplies(i, max);
     
         for (int x : multiplies) {
             numbers.erase(remove(numbers.begin(), numbers.end(), x), numbers.end());
         }
     }
-    
+    cout << "The Prime Numbers from 1 to" << max << " are: " << endl;
     for(int number : numbers) {
         cout << number << endl;
     }
-
-    cout << "size: " << numbers.size() << endl;
-    cout << "mutliplies: " << multiplies.size() << endl;
     return 0;
 }
 
