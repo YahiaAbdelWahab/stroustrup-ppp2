@@ -21,10 +21,13 @@ int main()
             numbers.erase(remove(numbers.begin(), numbers.end(), x), numbers.end());
         }
     }
-    cout << "The Prime Numbers from 1 to 100 are: " << endl;
+    
     for(int number : numbers) {
         cout << number << endl;
     }
+
+    cout << "size: " << numbers.size() << endl;
+    cout << "mutliplies: " << multiplies.size() << endl;
     return 0;
 }
 
