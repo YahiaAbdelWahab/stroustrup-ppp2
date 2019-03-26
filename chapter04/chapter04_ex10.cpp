@@ -7,6 +7,7 @@ int main()
     vector<string> computers_moves = {"rock", "paper", "scissors"};
     int computer_wins = 0;
     int user_wins = 0;
+    int draws = 0;
     int i = 0;
     string input = "";
     while (i < 3) {
@@ -22,11 +23,13 @@ int main()
 
         if (result == input) user_wins++;
         else if (result == computers_choice) computer_wins++;
+        else if (result == "draw") draws++;
 
         cout << "Computer choice: " << computers_choice << endl;
         cout << "Result: " << result << endl;
         cout << "User won: " << user_wins << " times" << endl;
         cout << "Computer won: " << computer_wins << " times" << endl;
+        cout << draws << " draws" << endl;
 
         i++;
 
@@ -43,6 +46,6 @@ string get_winner(string input1, string input2) {
     } else if ((input1 == "rock" && input2 == "paper") || (input1 == "paper" && input2 == "rock")) {
         return "paper";
     } else {
-        return "tie";
+        return "draw";
     }
 }
