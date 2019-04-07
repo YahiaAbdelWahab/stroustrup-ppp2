@@ -26,19 +26,20 @@ int main()
         double t = 0; // declare input variable
         char unit = 0;
         cin >> t >> unit; // retrieve temperature to input variable
+        double converted_t = 0;
         switch (unit)
         {
-            case 'C': {
-                double k = ctok(t);
-                cout << k << "K\n";
-            } break;
-            case 'K': {
-                double c = ktoc(t);
-                cout << c << "C\n";
-            } break;
-            default: {
+            case 'C':
+                converted_t = ctok(t);
+                cout << converted_t << "K\n";
+                break;
+            case 'K':
+                converted_t = ktoc(t);
+                cout << converted_t << "C\n";
+                break;
+            default:
                 error("Unknown unit.\n");
-            } break;
+                break;
         }
         return 0;
     } catch (runtime_error& e) {
