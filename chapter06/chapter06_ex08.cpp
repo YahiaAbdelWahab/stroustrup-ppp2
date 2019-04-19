@@ -21,10 +21,11 @@ int main()
                 else error("You have to enter letters.\n");
             }
 
+            // Take the first four (vector1.size()) characters only.
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            
+
             // Check if the all values of vector2 are different.
             vector<char> vector2_temp = vector2;
             sort(vector2_temp);
